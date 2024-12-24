@@ -1,8 +1,9 @@
 # /usr/local/etc/poudriere.d/packages-default
 
-x11/gnome
 sysutils/tmux
 editors/neovim
 shells/zsh
 security/sudo
 sysutils/htop
+x11/gnome
+x11/nvidia-driver
