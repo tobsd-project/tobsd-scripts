@@ -23,3 +23,5 @@ fi
 
 # Now build all of the packages listed in "packages-default" file
 poudriere bulk -j 142x64 -p default -f /usr/local/etc/poudriere.d/packages-default
+
+pkg install tmux neovim zsh sudo htop gnome
