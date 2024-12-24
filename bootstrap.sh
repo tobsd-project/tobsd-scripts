@@ -2,15 +2,8 @@
 cd "$(dirname "$0")"
 
 # so far I've installed: git, curl, wget, vim
-# I need to install a GUI
-# X can be installed via ports or via pkg
-# Lets see what I need to do in order to include nvidia drivers
-#cd /usr/ports/x11/gnome && make -DBATCH install
-# that works, but I stopped it bc I want to use poudriere instead.
 
-#
 # First build poudriere
-#
 # cd /usr/ports/ports-mgmt/poudriere && make -DBATCH install
 cp etc/poudriere.conf /usr/local/etc/
 cp etc/poudriere.d/packages-default /usr/local/etc/poudriere.d/
