@@ -3,11 +3,13 @@ cd "$(dirname "$0")"
 
 # so far I've installed: git, curl, wget, vim
 
+# https://wiki.freebsd.org/VladimirKrstulja/Guides/Poudriere
 # First build poudriere
 # cd /usr/ports/ports-mgmt/poudriere && make -DBATCH install
 cp etc/poudriere.conf /usr/local/etc/
 cp etc/poudriere.d/packages-default /usr/local/etc/poudriere.d/
 
+# Configure pkg to use my ports tree
 mkdir -p /usr/local/etc/pkg/repos
 cp etc/pkg/repos/Local.conf /usr/local/etc/pkg/repos/
 
@@ -16,7 +18,7 @@ if ! poudriere jail -lnq | grep --quiet '^142x64$'; then
   poudriere jail -c -j 142x64 -v 14.2-RELEASE
 fi
 
-# Crate ports tree if not already exists
+# Create ports tree if not already exists
 if ! poudriere ports -lnq | grep --quiet '^default$'; then
   poudriere ports -c -p default
 fi
@@ -24,4 +26,10 @@ fi
 # Now build all of the packages listed in "packages-default" file
 poudriere bulk -j 142x64 -p default -f /usr/local/etc/poudriere.d/packages-default
 
+# Install packages from my ports tree
 pkg install tmux neovim zsh sudo htop gnome
+
+# Enable gnome
+sysrc gnome_enable="YES"
+sysrc gdm_enable="YES"
+sysrc dbus_enable="YES"
