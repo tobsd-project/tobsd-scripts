@@ -1,0 +1,4 @@
+# My Default Settings #
+
+[org.gnome.desktop.interface]
+monospace-font-name = 'DejaVu Sans Mono 10'
