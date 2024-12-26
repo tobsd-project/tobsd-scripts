@@ -27,7 +27,7 @@ fi
 poudriere bulk -j 142x64 -p default -f /usr/local/etc/poudriere.d/packages-default
 
 # Install packages from my ports tree
-pkg install tmux neovim zsh sudo htop gnome
+pkg install -q tmux neovim zsh sudo htop gnome xorg
 
 # Enable gnome
 sysrc gnome_enable="YES"
