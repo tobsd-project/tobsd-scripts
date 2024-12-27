@@ -27,9 +27,12 @@ fi
 poudriere bulk -j 142x64 -p default -f /usr/local/etc/poudriere.d/packages-default
 
 # Install packages from my ports tree
-pkg install -q tmux neovim zsh sudo htop gnome xorg
+pkg install -q tmux neovim zsh sudo htop plasma5-plasma konsole xorg lightdm slick-greeter networkmgr
 
-# Enable gnome
-sysrc gnome_enable="YES"
-sysrc gdm_enable="YES"
-sysrc dbus_enable="YES"
+# for testing/dev
+pkg install -q xephyr
+
+# copy rc.conf
+cp rc.conf /etc/
+
+mkdir /usr/local/share/backgrounds
