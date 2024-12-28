@@ -2,3 +2,6 @@
 
 [org.gnome.desktop.interface]
 monospace-font-name = 'DejaVu Sans Mono 10'
+
+[x.dm.slick-greeter]
+background = "/usr/local/share/backgrounds/pexels-bri-schneiter.jpg"

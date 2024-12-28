@@ -36,3 +36,4 @@ pkg install -q xephyr
 cp rc.conf /etc/
 
 mkdir /usr/local/share/backgrounds
+cp pexels-bri-schneiter.jpg /usr/local/share/backgrounds/
