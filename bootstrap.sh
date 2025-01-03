@@ -27,7 +27,7 @@ fi
 poudriere bulk -j 142x64 -p default -f /usr/local/etc/poudriere.d/packages-default
 
 # Install packages from my ports tree
-pkg install -q tmux neovim zsh sudo htop plasma5-plasma konsole xorg lightdm slick-greeter networkmgr
+pkg install -q tmux neovim zsh sudo htop plasma5-plasma konsole xorg lightdm slick-greeter networkmgr octopkg keepassxc chromium
 
 # for testing/dev
 pkg install -q xephyr

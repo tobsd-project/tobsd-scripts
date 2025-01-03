@@ -2,6 +2,9 @@
 
 [org.gnome.desktop.interface]
 monospace-font-name = 'DejaVu Sans Mono 10'
+# for xfce only
+gtk-theme = 'Greybird-dark'
+color-scheme = 'prefer-dark'
 
 [x.dm.slick-greeter]
 background = "/usr/local/share/backgrounds/pexels-bri-schneiter.jpg"
